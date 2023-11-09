@@ -8,14 +8,14 @@ body {
 	background-color: #FAF6F2;
 	font-family: 'Montserrat';
 	font-weight: 10;
+	max-width: 100%;
 }
-
 
 a {
 	color: black;
 	font-size: 1.25em;
 	padding: 20px;
-	class="w100"
+	
 }
 
 h1 {
@@ -27,10 +27,9 @@ h1 {
 
 h2 {
 	font-size: 2.875em;
-	margin-top: 5%;
+	margin-top: 10%;
 	font-family: 'EB Garamond';
 }
-
 
 p {
 	color: black;
@@ -49,38 +48,33 @@ p {
 	font-weight: 200;
 }
 
-/* sets the base settings*/
-.background {
-	height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	
-}
-
-
 
 /* top LOGO Banner items */
+
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	
+}
 
 .logo-container {
 	position: absolute;
 	top: 1%;
-	background-color: #402c25;
+	background-color: #B18779;
 	width: 100%;
-	/* border-color: blue; */
 }
 
 .logo-container img {
 	margin-left: 10%;
-	
 }
 
 .menu-container {
 	position: absolute;
 	top: 1%;
-	right: 20%;
-	display: grid;
+	right: 10%;
+	display: flex;
 	grid-template-columns: 30% 30% 40% 30% 30%;
 	align-items: center;
 	justify-content: center;
@@ -93,10 +87,10 @@ p {
 
 
 .menu-container a {
-	color: #FAF6F2;
+	color: #f2f2f2;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-
+	font-size: 1.75em;
 }
 
 /* main Content Containers */
@@ -104,17 +98,16 @@ p {
 .top-container {
 	padding: 20px;
 	text-align: center;
-
+	direction: ltr;
 }
 
 .top-container p {
 	padding-left: 30%;
 	left: 20%;
-
 }
 
 
-/* Blurred & Banner Containers not used */ 
+/* Blurred & Banner Containers not used */
 
 .image-blurred-edge {
 	display: block;
@@ -123,9 +116,7 @@ p {
 	height: 400;
 	position: absolute;
 	box-shadow: 10px 10px 8px 8px #402c25;
-	
 }
-
 
 
 .zoom {
@@ -135,36 +126,31 @@ p {
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
-	
-  }
-  
+}
 
-
-  .zoom_large {
+.zoom_large {
 	padding: 10px;
 	background-color: #402c25;
 	transition: transform .2s;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
-  }
+}
 
 .zoom:hover {
-	-ms-transform: scale(1.5); /* IE 9 */
-	-webkit-transform: scale(1.5); /* Safari 3-8 */
-	transform: scale(1.5); 
-  }
-
-
+	-ms-transform: scale(1.5);
+	/* IE 9 */
+	-webkit-transform: scale(1.5);
+	/* Safari 3-8 */
+	transform: scale(1.5);
+}
 
 
 .banner-container {
 	background-color: #FAFAF2;
-	/
 }
 
 .banner-content {
-
 	position: absolute;
 	display: grid;
 	grid-template-columns: 70% 0%;
@@ -176,7 +162,7 @@ p {
 
 
 .image_scroll {
-	background-color: #402c25;
+
 	overflow: auto;
 	white-space: nowrap;
 	padding: 10px;
@@ -188,15 +174,41 @@ p {
 }
 
 .mid-container {
+	color: #f2f2f2;
 	text-align: center;
-	margin-top: 10%;
+	background-color: #402c25;
+	margin-top: 0;
+}
+
+
+
+.mid-container p {
+	color: #f2f2f2;
+	font-size: 1.75em;
+	padding-bottom: 2%;
+}
+
+
+.lower-container {
+	color: #f2f2f2;
+	text-align: center;
+	background-color: #402c25;
 	margin: 0;
 }
+
+.lower-container p {
+	color: #f2f2f2;
+	font-size: 1.75em;
+	padding-bottom: 2%;
+}
+
 
 /* ref: for the image grid responsive.
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive
   Create three equal columns that sits next to each other */
-.row {
+
+
+  .row {
 	display: -ms-flexbox;
 	/* IE10 */
 	display: flex;
@@ -223,7 +235,7 @@ p {
 	border-radius: 5%;
 }
 
-/* Responsive layout - makes a two one-layout instead of three columns */
+/* Responsive layout - makes a one-layout instead of three columns */
 @media screen and (max-width: 800px) {
 	.column {
 		-ms-flex: 50%;
@@ -232,7 +244,8 @@ p {
 	}
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
 	.column {
 		-ms-flex: 100%;
@@ -240,28 +253,6 @@ p {
 		max-width: 100%;
 	}
 }
-
-
-@media screen and (max-width: 600px) {
-	.image_container_a {
-		display: -ms-flexbox;
-		grid-template-columns: 100%;
-		align-items: center;
-		font-size: 0.875em;
-		justify-content: center;
-		justify-items: center;
-
-	}
-}
-
-.image_container_a>div {
-
-	margin: 30px;
-	-ms-flex: 100%;
-	flex: 100%;
-	max-width: 100%;
-}
-
 
 input[type=text],
 select {
@@ -290,32 +281,72 @@ input[type=submit]:hover {
 	background-color: #8f6f6f;
 }
 
+.flex_container {
+	display: -ms-flexbox;
+	/* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap;
+	/* IE10 */
+	flex-wrap: wrap;
+	padding: 0 4px;
+	margin-top: 5%;
+	justify-content: center; 
+}
+/* Unable to get the form width 100% when on responsive mode */
+
+.form_container {
+	position: relative;
+	top: 1%;
+	display: grid;
+	grid-template-columns: 50% 30% 30%;
+	align-items: center;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+}
+
+
 form {
+	
+	padding: 0 4px;
+	margin-top: 5%;
+	justify-content: center;
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 30%;
+	margin-right: 30%;
 	margin-bottom: 10%;
 }
 
+
+@media screen and (max-width: 800px) {
+	.form {
+		-ms-flex: 100%;
+		/*flex: 50%; */
+		/*max-width: 75%; */
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.location-container {
+		-ms-flex: 25%;
+		/* flex: 25%; */
+		/* max-width: 25%; */
+	}
+}
+
 .location-container {
-	display: grid;
 	position: absolute;
-	bottom: 100%;
-	margin-left: 25%;
-	margin-right: 25%;
-	grid-template-columns: 50% 50%;
+	margin-left: 40%;
 	align-items: center;
 	font-size: 0.875em;
-	/* margin: 30px; */
-	/*color: blue;*/
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
 }
 
-.location-container img{
+.location-container img {
 	margin-bottom: 5%;
-
 }
 
 .footer-container {
@@ -325,8 +356,7 @@ form {
 }
 
 .footer-container img {
-
-	margin-left: 5%;
+	margin-right: 50%;
 }
 
 
@@ -339,13 +369,11 @@ form {
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
-
 }
 
 .footer-menu-container p {
 	color: #FAF6F2;
 	font-size: small;
-
 }
 
 .footer-menu-container a {
