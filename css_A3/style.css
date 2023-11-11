@@ -14,7 +14,7 @@ body {
 }
 a {
 	color: black;
-	font-size: 1.25em;
+	font-size: 1em;
 	padding: 20px;
 }
 h1 {
@@ -69,12 +69,13 @@ div.sticky {
 .menu-container {
 	position: absolute;
 	top: 1%;
-	right: 10%;
+	left: 30%;
 	display: flex;
-	grid-template-columns: 30% 30% 40% 30% 30%;
+	/* grid-template-columns: 30% 30% 40% 30% 30%; */
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
+	flex-direction: row;
 }
 .menu-container p {
 	color: #FAF6F2;
@@ -83,7 +84,7 @@ div.sticky {
 	color: #f2f2f2;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 /* main Content Containers */
 .top-container {
@@ -250,8 +251,8 @@ form {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: 10%;
+	margin-right: 0%;
 	margin-bottom: 10%;
 }
 @media screen and (max-width: 800px) {
@@ -266,10 +267,10 @@ form {
 }
 .location-container {
 	position: absolute;
-	margin-left: 40%;
+	margin-left: 50%;
 	align-items: center;
 	font-size: 0.875em;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) 
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
 }
 .location-container img {
 	margin-bottom: 5%;
@@ -280,17 +281,17 @@ form {
 	position: relative;
 }
 .footer-container img {
-	margin-left: 10%;
+	margin-left: 5%;
 }
 .footer-menu-container {
 	position: absolute;
 	bottom: 25%;
-	right: 10%;
+	left: 15%;
 	display: grid;
 	grid-template-columns: 30% 30% 20% 20% 20%;
-	align-items: center;
 	justify-content: center;
 	justify-items: center;
+	align-items: center;
 }
 .footer-menu-container p {
 	color: #FAF6F2;
