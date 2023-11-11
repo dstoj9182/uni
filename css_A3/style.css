@@ -1,36 +1,40 @@
-/* Hi, I'm a css code comment, written a little bit different to html! 
-Add some css to this document */
-
+/* Hi, I'm a css code comment, written a little bit different to html! Add some css to this document */
 /* Removing default styling */
-/* color only affects text,  background-color only affects elements */
+/* color only affects text, background-color only affects elements */
 body {
-	height: 100%;
-	background-color: #FAF6F2;
 	font-family: 'Montserrat';
-	font-weight: 10;
-	max-width: 100%;
+	/*font-weight: 10; */
+	max-width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+   /* utilise CSS to render background image, located in CSS folder */
+	background-image: url("images/farm sunseta.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
-
 a {
 	color: black;
 	font-size: 1.25em;
 	padding: 20px;
-	
 }
-
 h1 {
-	font-size: 5em;
+	font-size: 6em;
 	color: #1E150C;
 	text-align: center;
 	font-family: 'EB Garamond';
 }
-
 h2 {
 	font-size: 2.875em;
-	margin-top: 10%;
+   /* margin-top: 10%;
+	*/
 	font-family: 'EB Garamond';
 }
-
+h3 {
+	font-size: 1.5em;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-family: 'EB Garamond';
+}
 p {
 	color: black;
 	font-size: 1.25em;
@@ -39,38 +43,29 @@ p {
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 5%;
 }
-
 .w100 {
 	font-weight: 100;
 }
-
 .w200 {
 	font-weight: 200;
 }
-
-
+.bold {
+	font-weight: bold;
+}
 /* top LOGO Banner items */
-
 div.sticky {
-	
 	position: sticky;
 	top: 0;
-	width: 100%;
-	
 }
-
 .logo-container {
 	position: absolute;
 	top: 1%;
-	background-color: #B18779;
 	width: 100%;
-	
+	background-color: #6F8FAF;
 }
-
 .logo-container img {
 	margin-left: 10%;
 }
-
 .menu-container {
 	position: absolute;
 	top: 1%;
@@ -81,77 +76,46 @@ div.sticky {
 	justify-content: center;
 	justify-items: center;
 }
-
 .menu-container p {
 	color: #FAF6F2;
 }
-
-
 .menu-container a {
 	color: #f2f2f2;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	font-size: 1.75em;
-	
+	font-size: 1.5em;
 }
-
 /* main Content Containers */
-
 .top-container {
 	padding: 20px;
-	text-align: center;
-	direction: ltr;
+   /* text-align: center;
+	*/
+   /* direction: ltr;
+	*/
 }
-
-.top-container p {
-	padding-left: 30%;
-	left: 20%;
-}
-
-
 /* Blurred & Banner Containers not used */
-
-.image-blurred-edge {
-	display: block;
-	width: 600;
-	left: 10%;
-	height: 400;
-	position: absolute;
-	box-shadow: 10px 10px 8px 8px #402c25;
-}
-
-
 .zoom {
 	padding: 10px;
-	background-color: #402c25;
+	padding-bottom: 5%;
 	transition: transform .2s;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
 }
-
-.zoom_large {
-	padding: 10px;
-	background-color: #402c25;
-	transition: transform .2s;
-	width: 200px;
-	height: 200px;
-	margin: 0 auto;
-}
-
 .zoom:hover {
 	-ms-transform: scale(1.5);
-	/* IE 9 */
+   /* IE 9 */
 	-webkit-transform: scale(1.5);
-	/* Safari 3-8 */
+   /* Safari 3-8 */
 	transform: scale(1.5);
 }
-
-
+.zoom img {
+	border-radius: 10%;
+	box-shadow: 10px 10px 8px 8px #402c25;
+}
 .banner-container {
 	background-color: #FAFAF2;
 }
-
 .banner-content {
 	position: absolute;
 	display: grid;
@@ -161,103 +125,81 @@ div.sticky {
 	margin-top: -8%;
 	text-align: center;
 }
-
-
 .image_scroll {
-
 	overflow: auto;
 	white-space: nowrap;
 	padding: 10px;
 }
-
 .image_scroll img {
 	padding: 10px;
 	border-radius: 5%;
 }
-
 .mid-container {
 	color: #f2f2f2;
 	text-align: center;
 	background-color: #402c25;
-	margin-top: 0;
+	margin-top: 10%;
 }
-
-
-
 .mid-container p {
 	color: #f2f2f2;
 	font-size: 1.75em;
 	padding-bottom: 2%;
 }
-
-
 .lower-container {
 	color: #f2f2f2;
 	text-align: center;
 	background-color: #402c25;
 	margin: 0;
 }
-
 .lower-container p {
 	color: #f2f2f2;
 	font-size: 1.75em;
 	padding-bottom: 2%;
 }
-
-
-/* ref: for the image grid responsive.
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive
-  Create three equal columns that sits next to each other */
-
-
-  .row {
+/* ref: for the image grid responsive. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive Create three equal columns that sits next to each other */
+.row {
 	display: -ms-flexbox;
-	/* IE10 */
+   /* IE10 */
 	display: flex;
 	-ms-flex-wrap: wrap;
-	/* IE10 */
+   /* IE10 */
 	flex-wrap: wrap;
 	padding: 0 4px;
 	margin-top: 5%;
 	justify-content: center;
 }
-
-
 .column {
 	-ms-flex: 25%;
 	flex: 25%;
 	max-width: 40%;
 	padding: 0 4px;
 }
-
 .column img {
 	margin-top: 8px;
 	vertical-align: middle;
 	width: 100%;
 	border-radius: 5%;
 }
-
+.column p {
+	font-weight: bold;
+}
 /* Responsive layout - makes a one-layout instead of three columns */
 @media screen and (max-width: 800px) {
 	.column {
 		-ms-flex: 50%;
 		flex: 50%;
 		max-width: 50%;
-	}
+   }
 }
-
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-
 @media screen and (max-width: 600px) {
 	.column {
 		-ms-flex: 100%;
 		flex: 100%;
 		max-width: 100%;
-	}
+   }
 }
-
-input[type=text],
-select {
+input[type=text], select {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -266,7 +208,6 @@ select {
 	border-radius: 4px;
 	box-sizing: border-box;
 }
-
 input[type=submit] {
 	width: 100%;
 	background-color: #402c25;
@@ -276,26 +217,22 @@ input[type=submit] {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-
 }
-
 input[type=submit]:hover {
 	background-color: #8f6f6f;
 }
-
 .flex_container {
 	display: -ms-flexbox;
-	/* IE10 */
+   /* IE10 */
 	display: flex;
 	-ms-flex-wrap: wrap;
-	/* IE10 */
+   /* IE10 */
 	flex-wrap: wrap;
 	padding: 0 4px;
 	margin-top: 5%;
-	justify-content: center; 
+	justify-content: center;
 }
 /* Unable to get the form width 100% when on responsive mode */
-
 .form_container {
 	position: relative;
 	top: 1%;
@@ -306,10 +243,7 @@ input[type=submit]:hover {
 	justify-items: center;
 	align-content: space-evenly;
 }
-
-
 form {
-	
 	padding: 0 4px;
 	margin-top: 5%;
 	justify-content: center;
@@ -320,48 +254,34 @@ form {
 	margin-right: 30%;
 	margin-bottom: 10%;
 }
-
-
 @media screen and (max-width: 800px) {
 	.form {
 		-ms-flex: 100%;
-		/*flex: 50%; */
-		/*max-width: 75%; */
-	}
+   }
 }
-
-
 @media screen and (max-width: 600px) {
 	.location-container {
 		-ms-flex: 25%;
-		/* flex: 25%; */
-		/* max-width: 25%; */
-	}
+   }
 }
-
 .location-container {
 	position: absolute;
 	margin-left: 40%;
 	align-items: center;
 	font-size: 0.875em;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) 
 }
-
 .location-container img {
 	margin-bottom: 5%;
 }
-
 .footer-container {
-	background-color: #402c25;
+	background-color: #6F8FAF;
 	width: 100%;
 	position: relative;
 }
-
 .footer-container img {
-	margin-right: 50%;
+	margin-left: 10%;
 }
-
-
 .footer-menu-container {
 	position: absolute;
 	bottom: 25%;
@@ -372,12 +292,10 @@ form {
 	justify-content: center;
 	justify-items: center;
 }
-
 .footer-menu-container p {
 	color: #FAF6F2;
 	font-size: small;
 }
-
 .footer-menu-container a {
 	color: #FAF6F2;
 	font-family: 'Montserrat', sans-serif;
