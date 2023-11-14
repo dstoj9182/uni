@@ -184,20 +184,21 @@ div.sticky {
 .column p {
 	font-weight: bold;
 }
-/* Responsive layout - makes a one-layout instead of three columns */
+/* Responsive layout - stacks on responsive <  800px*/
 @media screen and (max-width: 800px) {
 	.column {
-		-ms-flex: 50%;
-		flex: 50%;
-		max-width: 50%;
+		-ms-flex: 90%;
+		flex: 90%;
+		max-width: 90%;
    }
 }
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - resizes the images when screen resolution < 600px*/
+
 @media screen and (max-width: 600px) {
 	.column {
-		-ms-flex: 100%;
-		flex: 100%;
-		max-width: 100%;
+		-ms-flex: 80%;
+		flex: 80%;
+		max-width: 80%;
    }
 }
 input[type=text], select {
