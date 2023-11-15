@@ -3,16 +3,21 @@
 /* color only affects text, background-color only affects elements */
 body {
 	font-family: 'Montserrat';
-	/*font-weight: 10; */
-	max-width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	/* utilise CSS to render background image, located in CSS folder */
 	background-image: url("images/farm sunseta.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	
 }
 
+html{ /* for smoother section navigation */
+
+	scroll-behavior: smooth;
+}
+.main{
+	max-width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
 a {
 	color: black;
 	font-size: 1em;
@@ -28,21 +33,16 @@ h1 {
 
 h2 {
 	font-size: 2.875em;
-	/* margin-top: 10%;
-	*/
 	font-family: 'EB Garamond';
 }
 
 h3 {
 	font-size: 1.5em;
 	padding-left: 15%;
-	/* padding-right: 15%; */
 	font-family: 'EB Garamond';
-	/* vertical-align: middle; */
 }
 
 p {
-	color: black;
 	font-size: 1.em;
 	padding-left: 15%;
 	padding-right: 15%;
@@ -84,7 +84,6 @@ div.sticky {
 	top: 1%;
 	left: 30%;
 	display: flex;
-	/* grid-template-columns: 30% 30% 40% 30% 30%; */
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
@@ -105,28 +104,25 @@ div.sticky {
 /* main Content Containers */
 .top-container {
 	padding: 20px;
-	/* text-align: center;
-	*/
-	/* direction: ltr;
-	*/
+	
 }
 
 /* Blurred & Banner Containers not used */
 .zoom {
 	padding: 10px;
 	padding-bottom: 5%;
-	transition: transform .2s;
+	transition: transform .3s;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
 }
 
 .zoom:hover {
-	-ms-transform: scale(1.5);
+	-ms-transform: scale(1.1);
 	/* IE 9 */
-	-webkit-transform: scale(1.5);
+	-webkit-transform: scale(1.1);
 	/* Safari 3-8 */
-	transform: scale(1.5);
+	transform: scale(1.1);
 }
 
 .zoom img {
@@ -160,23 +156,27 @@ div.sticky {
 	border-radius: 5%;
 }
 
+.header_container{
+	margin-top: 10%;
+}
+
 .mid-container {
 	color: #f2f2f2;
 	text-align: center;
-	background-color: #402c25;
+	background-color: #8c6051;
 	margin-top: 10%;
+	margin-bottom: 10%;
 }
 
 .mid-container p {
 	color: #f2f2f2;
-	/* font-size: 1.5em; */
 	padding-bottom: 2%;
 }
 
 .lower-container {
 	color: #f2f2f2;
 	text-align: center;
-	background-color: #402c25;
+	background-color: #8c6051;
 	margin: 0;
 }
 
@@ -208,14 +208,14 @@ div.sticky {
 .column {
 	-ms-flex: 30%;
 	flex: 30%;
-	max-width: 40%;
+	max-width: 50%;
 	padding: 0 4px;
 }
 
 .column img {
 	margin-top: 8px;
 	vertical-align: middle;
-	width: 100%;
+	width: 80%;
 	border-radius: 10px;
 }
 
@@ -225,7 +225,7 @@ div.sticky {
 }
 
 .column p {
-	font-weight: bold;
+	/* font-weight: bold; */
 	vertical-align: middle;
 }
 
